@@ -1,0 +1,25 @@
+{
+  "name": "touchp",
+  "version": "1.0.0",
+  "description": "mkdir -p meets touch",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rschmukler/touchp"
+  },
+  "keywords": [
+    "touch",
+    "mkdir",
+    "mkdir",
+    "-p"
+  ],
+  "author": "Ryan Schmukler <ryan@slingingcode.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rschmukler/touchp/issues"
+  },
+  "homepage": "https://github.com/rschmukler/touchp"
+}
