@@ -1,6 +1,6 @@
 # touchp
 
-Like `mkdir -p`, but with touch
+Like `mkdir -p`, but with `touch`
 
 ## Install
 
