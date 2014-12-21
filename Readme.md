@@ -13,9 +13,9 @@ npm install touchp
 ```js
 var touchp = require('touchp');
 
-touchp('some/path/that/may/not/exist.txt', function(err) {
-  console.log("Yay!");
+touchp('some/path/that/may/not/exist.txt', function(err, alreadyExisted) {
+  console.log("File " + (alreadyExisted ? 'already exists' : 'was created'));
 });
 
-touchp.sync('some/other/path/that/may/not/exist.txt')
+var existedBefore = touchp.sync('some/other/path/that/may/not/exist.txt')
 ```

@@ -5,11 +5,14 @@ var mkdirp = require('mkdirp');
 function touchp(filePath, cb) {
   var dirPath = path.dirname(filePath);
   fs.exists(filePath, function(exists) {
-    if (exists) return cb(null);
+    if (exists) return cb(null, true);
     if (!exists) {
       mkdirp(dirPath, function(err) {
         if(err) return cb(err);
-        return touch(filePath, cb);
+        return touch(filePath, function(err) {
+          if (err) return cb(err);
+          return cb(null, false);
+        });
       });
     }
   });
@@ -18,9 +21,10 @@ function touchp(filePath, cb) {
 touchp.sync = function(filePath) {
   var dirPath = path.dirname(filePath);
   var exists = fs.existsSync(filePath);
-  if (exists) return;
+  if (exists) return true;
   mkdirp.sync(dirPath);
   touchSync(filePath);
+  return false;
 };
 
 module.exports = touchp;
