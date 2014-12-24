@@ -27,6 +27,8 @@ touchp.sync = function(filePath) {
   return false;
 };
 
+touchp.mkdirp = mkdirp;
+
 module.exports = touchp;
 
 function touch(filePath, cb) {
