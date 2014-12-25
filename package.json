@@ -1,6 +1,6 @@
 {
   "name": "touchp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "mkdir -p meets touch",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "touch",
+    "touchp",
     "mkdir",
     "mkdir",
     "-p"
